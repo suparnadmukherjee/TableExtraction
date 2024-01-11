@@ -1,0 +1,6 @@
+train: '/home/sarabjot/genai_table/data/train/images'
+val: '/home/sarabjot/genai_table/data/val/images'
+ 
+# class names
+names: 
+  0: 'Table'

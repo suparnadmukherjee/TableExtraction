@@ -1,0 +1,6 @@
+train: '/home/suparna/PycharmProjects/YOLO_finetuning_dec/data/train/images'
+val: '/home/suparna/PycharmProjects/YOLO_finetuning_dec/data/val/images'
+ 
+# class names
+names: 
+  0: 'Table'

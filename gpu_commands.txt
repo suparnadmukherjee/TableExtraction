@@ -1,0 +1,23 @@
+1. openvpn3 session-start --config /home/suparna/vpnclient/client.ovpn
+	=p+m903D5£FR
+2. ssh sarabjot@172.27.222.2
+2a.filezilla
+	port 172.27.222.2
+	username: sarabjot
+	password: sarabjot"123
+	port:22
+
+2. create an env for finetuning
+	conda create -n yolo_ft python==3.8
+3. install requirements.(only ultralytics will do for finetuning purpose)
+4. make a dir for data
+	mkdir -p <put full directory path>
+  yolo_ft
+  	data.yaml
+  	data
+5.transfer data and keremberke model to beauty
+6.cd into yolo_ft
+7.run command
+	yolo task=detect mode=train model=/home/sarabjot/genai_table/yolov8m-table-extraction/best.pt imgsz=640 data=/home/sarabjot/genai_table/FT_data_gpu.yaml epochs=75 batch=10 name=beauty_yolo_ft
+8. Validation:
+yolo task=detect mode=val model=/home/sarabjot/genai_table/runs/detect/beauty_yolo_ft3/weights/best.pt name=epochs100_validation data=/home/sarabjot/genai_table/FT_data_gpu.yaml imgsz=640
